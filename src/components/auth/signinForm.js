@@ -1,20 +1,54 @@
-import React, { Component } from 'react';
+// import React, { Component } from 'react';
 
-import { reduxForm } from 'redux-form';
+// import { reduxForm, Field } from 'redux-form';
 
-class SignInForm extends Component {
-    render() {
-        const { className } = this.props;
-        return (
-            <form className={`${className} sign-in-form`}>
-                sign in
-            </form>
-        )
-    }
-}
+// import { FormInput } from '../formFields';
 
-SignInForm = reduxForm({
-    form: 'SignInForm'
-})(SignInForm);
+// class SignInForm extends Component {
+//     render() {
+//         const { className } = this.props;
+//         return (
+//             <form className={`${className} sign-in-form`}>
+//                 <Field className='sign-in-form__email' name='email' component={FormInput} />
+//             </form>
+//         )
+//     }
+// }
 
-export default SignInForm;
+// SignInForm = reduxForm({
+//     form: 'SignInForm'
+// })(SignInForm);
+
+// export default SignInForm;
+
+
+
+// import React, { Component } from 'react';
+
+// import { reduxForm, Field } from 'redux-form';
+
+// import { FormInput } from '../formFields';
+
+// class SignInForm extends Component {
+//     render() {
+//         const { className } = this.props;
+//         return (
+//             <form className={`${className} sign-in-form`}>
+//                 <Field className='sign-in-form__email'
+//                     type='email'
+//                     title='Email'
+//                     placeholder='Email'
+//                     name='email'
+//                     component={FormInput} />
+//                 <Field className='sign-in-form__password'
+//                     type='password'
+//                     title='Password'
+//                     placeholder='Password'
+//                     name='password'
+//                     component={FormInput} />
+//             </form>
+//         )
+//     }
+// }
+
+// export default SignInForm;
