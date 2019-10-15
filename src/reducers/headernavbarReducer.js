@@ -6,8 +6,22 @@ import {
 
 
 const INITIAL_STATE = {
-    headerLinks: [],
-    navbarLinks: []
+    headerLinks: [
+        {
+            title: 'yooooo'
+        },
+        {
+            title: 'YOOOOO'
+        }
+    ],
+    navbarLinks: [
+        {
+            title: 'account'
+        },
+        {
+            title: 'purchases'
+        }
+    ]
 }
 
 export default function (state = INITIAL_STATE, action) {
