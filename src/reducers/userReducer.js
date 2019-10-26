@@ -5,7 +5,17 @@ import {
 
 const INITIAL_STATE = {
     purchases: [],
-    purchaseDetail: {}
+    purchaseDetail: {
+        _id: -1,
+        total: 0,
+        orderNumber: '',
+        orderDate: null,
+        creditCard: '',
+        user: {
+            name: '',
+            shippingAddress: ''
+        }
+    }
 }
 
 export default function (state = INITIAL_STATE, action) {
@@ -21,11 +31,11 @@ export default function (state = INITIAL_STATE, action) {
                 if (purchase._id = action.payload) {
                     purchaseDetail = purchase;
                 }
-                return {
-                    ...state,
-                    purchaseDetail
-                }
             })
+            return {
+                ...state,
+                purchaseDetail
+            }
         default: return state;
     }
 }
