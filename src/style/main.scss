@@ -36,8 +36,10 @@ body {
 
 // SHOP
 @import 'shop/shop';
-@import 'shop/shop-search-bar.scss';
+@import 'shop/shop-search-bar';
 @import 'shop/shop-product';
+@import 'shop/shop-cart';
+// @import 'shop/cart-product';
 
 // QUANTITY 
 @import 'quantity';

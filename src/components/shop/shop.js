@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import * as actions from '../../actions';
 import ShopSearchBar from './shopSearchBar';
 import ShopProduct from './shopProduct';
+import ShopCart from './shopCart';
+// import CartButton from './cartButton';
 
 export class Shop extends Component {
 
@@ -36,18 +38,21 @@ export class Shop extends Component {
 
     render() {
         return (
-            <div className='shop'>
-                <ShopSearchBar onSubmit={this.onSubmit} className='shop__search-bar' />
-                <div className='shop__products'>
-                    {
-                        this.props.filteredProducts.map(product => {
-                            return (
-                                <ShopProduct {...product} key={product._id} />
-                            )
-                        })
-                    }
+            <div>
+                <ShopCart />
+                <div className='shop'>
+                    <ShopSearchBar onSubmit={this.onSubmit} className='shop__search-bar' />
+                    <div className='shop__products'>
+                        {
+                            this.props.filteredProducts.map(product => {
+                                return (
+                                    <ShopProduct {...product} key={product._id} />
+                                )
+                            })
+                        }
+                    </div>
+                    {/* shop cart button */}
                 </div>
-                {/* shop cart button */}
             </div>
         );
     }
