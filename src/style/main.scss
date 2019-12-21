@@ -15,6 +15,11 @@ html {
 body {
     font-family: "Open Sans";
     color: #808080;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    -webkit-tap-highlight-color: transparent;
 }
 
 
@@ -24,8 +29,7 @@ body {
 @import 'form-fields';
 @import 'details';
 
-// AUTH
-
+// AUTH 
 @import 'auth/signin';
 @import 'auth/signup';
 
@@ -38,9 +42,21 @@ body {
 @import 'shop/shop';
 @import 'shop/shop-search-bar';
 @import 'shop/shop-product';
-@import 'shop/shop-cart';
-// @import 'shop/cart-product';
 
-// QUANTITY 
+// CART
+@import 'shop/shop-cart';
+@import 'shop/cart-product';
+
+// QUANTITY
 @import 'quantity';
 @import 'green-price-tag';
+
+// REVIEW
+@import 'order/review';
+@import 'order/reviewForm';
+@import 'order/reviewProduct';
+
+// INFORMATION
+@import 'information/payment';
+@import 'information/shipping';
+@import 'information/infoHelp';

@@ -28,13 +28,13 @@ class Account extends Component {
                 _id: 0,
                 title: 'Purchase History',
                 active: true,
-                component: <PurchaseHistory />
+                component: <PurchaseHistory/>
             },
             {
                 _id: 1,
                 title: 'Account Information',
                 active: false,
-                component: <AccountInformation />
+                component: <AccountInformation/>
             }
         ]
 
@@ -44,10 +44,10 @@ class Account extends Component {
 
     renderContent() {
         let jsx;
-        if (this.props.navbarLinks) {
-            this.props.navbarLinks.map(link => {
-                if (link.active) {
-                    jsx = link.component
+        if(this.props.navbarLinks) {
+            this.props.navbarLinks.forEach(link => {
+                if(link.active) {
+                    jsx = link.component;
                 }
             })
         }
@@ -57,16 +57,15 @@ class Account extends Component {
     render() {
         return (
             <div className='account'>
-                {this.renderContent()}
+                { this.renderContent() }
             </div>
-        );
+        )
     }
 }
 
-
 function mapStateToProps(state) {
-    const { headerlinks, navbarLinks } = state.headerNavbar;
-    return { headerlinks, navbarLinks }
+    const { headerLinks, navbarLinks } = state.headerNavbar;
+    return { headerLinks, navbarLinks }
 }
 
 Account = connect(mapStateToProps, actions)(Account);

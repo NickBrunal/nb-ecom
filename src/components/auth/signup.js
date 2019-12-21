@@ -28,4 +28,5 @@ class SignUp extends Component {
 }
 
 SignUp = connect(null, actions)(SignUp);
+
 export default SignUp;

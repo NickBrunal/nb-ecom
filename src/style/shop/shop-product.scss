@@ -1,7 +1,7 @@
 
 
 
-// PLACE FRONT AND BACK ON TOP OF EACH OTHER
+// PLACE FRONT AND BACK ON TOP OF EACHOTHER
 .shop-product {
     display: grid;
     grid-template-rows: 1/-1;
@@ -12,23 +12,21 @@
         grid-column: 1/-1;
     }
 
-// SAME EFFECT BELOW
+    // SAME EFFECT BELOW
 
-    // &__front,
+    // &__front, 
     // &__back {
     //     grid-row: 1/-1;
     //     grid-column: 1/-1;
     // }
 }
 
-//  MADE CARD FLIP
+// CARD FLIP
 .shop-product {
-    display: grid;
-
     perspective: 150rem;
     -moz-perspective: 150rem;
 
-    &__front,
+    &__front, 
     &__back {
         backface-visibility: hidden;
         transition: all .3s ease;
@@ -46,7 +44,6 @@
     }
 }
 
-
 .shop-product__front {
     height: 314px;
     width: 240px;
@@ -57,22 +54,25 @@
 
     }
     &__title {
-        color:#333;
+        color: #333;
         font-size: 18px;
         font-family: 'Titillium Web';
         // text-align: center;
     }
+
+
 }
+
 
 
 .shop-product__back {
     height: 314px;
     width: 240px;
     background-color: white;
-    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 20px 0 rgba(0,0,0,0.1);
 
     display: grid;
-    grid-template-rows: 15px [title-s] 30px [title-e description-s] 1fr [description-e price-s] 25px [price-e footer-s] 65px [footer-e] 15px;
+    grid-template-rows: 15px [title-s] 30px [title-e description-s] 1fr [description-e price-s] 25px [price-e footer-s] 65px [footer-e] 15px; 
     grid-template-columns: 15px [s] 1fr [e] 15px;
     justify-items: start;
     grid-row-gap: 7px;
@@ -82,19 +82,19 @@
     }
 
     &__title {
+        grid-row: title-s/title-e;
+
         color: #00CB79;
         font-family: "Encode Sans Condensed";
         font-size: 16px;
-        font-weight: 500; 
-
-        grid-row: title-s/title-e;
+        font-weight: 500;
     }
 
     &__description {
+        grid-row: description-s/description-e;
+
         font-size: 13px;
         color: #333333;
-
-        grid-row: description-s/description-e;
     }
 
     &__price {
@@ -120,11 +120,11 @@
         display: grid;
         justify-items: center;
         align-items: center;
-        
+
         transition: all .3s ease;
 
         &:hover {
-            transform:scale(0.97);
+            transform: scale(0.97);
         }
 
         &:active {

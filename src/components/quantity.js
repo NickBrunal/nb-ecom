@@ -15,7 +15,7 @@ class Quantity extends Component {
                     <i className='fas fa-minus'></i>
                 </div>
             </div>
-        );
+        )
     }
 }
 

@@ -7,7 +7,7 @@ class Navbar extends Component {
 
     handleOnClick = (link) => {
         this.props.changeNavbarActive(link._id)
-        if (this.props.onClick) {
+        if(this.props.onClick) {
             this.props.onClick(link._id);
         }
     }
@@ -30,7 +30,7 @@ class Navbar extends Component {
 }
 
 function mapStateToProps(state) {
-    const { navbarLinks, onClick } = state.headerNavbar;
+    const{ navbarLinks, onClick } = state.headerNavbar;
     return {
         navbarLinks,
         onClick

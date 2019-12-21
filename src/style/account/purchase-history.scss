@@ -1,19 +1,18 @@
 .purchase-history {
     &__content {
-        display: grid;
+        display: grid; 
         grid-template-columns: 1fr 1fr;
         margin: 37px 0;
     }
     &__page-title {
-        border-bottom: 1px solid #ccc;
+        border-bottom: 1px solid #CCC;
     }
     &__border-bottom {
-        border-bottom: 1px solid #f2f2f2;
+        border-bottom: 1px solid #F2F2F2;
     }
 }
 
 .purchases {
-    
     display: grid;
     grid-gap: 10px;
     grid-template-columns: repeat(auto-fit, 80px);
@@ -39,7 +38,7 @@
     }
     &__total {
         grid-column: m/e;
-        grid-row: s/m;
+        grid-row: s/sm;
     }
     &__credit-card {
         grid-column: m/e;
@@ -59,10 +58,11 @@
         width: 150px;
         justify-self: center;
         text-decoration-line: underline;
-        color: #00cb78;
+        color: #00CB79;
         font-size: 14px;
         font-weight: 600;
     }
+
 }
 
 .purchase-detail-label {
@@ -70,6 +70,7 @@
     grid-template-rows: [s] 1fr [e];
     grid-template-columns: [s] 1fr [m] 1fr [e];
     grid-gap: 10px;
+
     & > * {
         grid-row: s/e;
     }

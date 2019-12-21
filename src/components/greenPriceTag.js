@@ -7,7 +7,7 @@ class GreenPriceTag extends Component {
             <div className={`${className} green-price-tag`}>
                 ${title}
             </div>
-        );
+        )
     }
 }
 

@@ -11,10 +11,10 @@ const INITIAL_STATE = {
     filteredProducts: []
 }
 
-export default function (state = INITIAL_STATE, action) {
+export default function(state = INITIAL_STATE, action) {
     switch (action.type) {
         case SET_SHOP_CATEGORIES:
-            const categories = action.payload;
+            const categories  = action.payload;
             return {
                 ...state,
                 categories
@@ -27,7 +27,7 @@ export default function (state = INITIAL_STATE, action) {
         case FILTER_PRODUCTS_WITH_CATEGORY_ID:
             var filteredProducts = [];
             state.products.map(product => {
-                if (product.belongsTo.includes(action.payload)) {
+                if(product.belongsTo.includes(action.payload)) {
                     filteredProducts.push(product);
                 }
             })
@@ -35,11 +35,10 @@ export default function (state = INITIAL_STATE, action) {
                 ...state,
                 filteredProducts
             }
-
-        case FILTER_PRODUCTS_WITH_QUERY:
-            var filteredProducts = [];
+        case FILTER_PRODUCTS_WITH_QUERY: 
+            var filteredProducts = [];            
             state.products.map(product => {
-                if (product.title.toLowerCase().includes(action.payload.query.toLowerCase())) {
+                if(product.title.toLowerCase().includes(action.payload.query.toLowerCase())) {
                     filteredProducts.push(product)
                 }
             })
